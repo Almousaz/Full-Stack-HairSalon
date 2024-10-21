@@ -28,7 +28,7 @@ const Booking = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5173/api/bookings", {
+    const response = await fetch("http://localhost:5000/api/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const Booking = () => {
             type="text"
             id="name"
             value={name}
-            onChange={() => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
@@ -67,7 +67,7 @@ const Booking = () => {
             type="text"
             id="email"
             value={email}
-            onChange={() => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>

@@ -8,7 +8,7 @@ const Admin = () => {
     
     useEffect(() => {
         const fetchBookings = async () => {
-            const response = await fetch('http://localhost:5173/api/bookings')
+            const response = await fetch('http://localhost:5000/api/bookings')
             const data = await response.json()
             setBookings(data)
 
